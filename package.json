@@ -4,7 +4,9 @@
   "description": "ecommerece website using mern stack",
   "main": "backend/server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon backend/server.js",
+    "dev": "nodemon backend/server.js"
   },
   "author": "hariharan nks",
   "license": "ISC",
