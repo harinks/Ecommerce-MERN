@@ -20,6 +20,22 @@ exports.getAllProducts = async(req,res)=>{
     })
 }
 
+//get single product
+exports.getProduct = async(req,res,next)=>{
+    let product = await productSchema.findById(req.params.id);
+
+    if(!product){
+        return res.status(404).json({
+            success:false,
+            message:"Product not found"
+        })
+    }
+    res.status(200).json({
+        success:true,
+        product
+    })
+}
+
 //update product - admin
 exports.updateProduct = async(req,res,next)=>{
     let product = await productSchema.findById(req.params.id);
@@ -55,6 +71,7 @@ exports.deleteProduct = async(req,res,next)=>{
     }
 
     await product.remove();
+
     res.status(200).json({
         success:true,
         message: "product deleted"
