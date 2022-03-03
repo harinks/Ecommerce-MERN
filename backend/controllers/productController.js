@@ -11,6 +11,11 @@ exports.createProduct = async(req,res,next)=>{
 }
 
 //get all products
-exports.getAllProducts = (req,res)=>{
-    res.status(200).json({message:"sample route"})
+exports.getAllProducts = async(req,res)=>{
+
+    const products = await productSchema.find()
+    res.status(200).json({
+        success:true,
+        products
+    })
 }
