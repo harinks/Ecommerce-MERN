@@ -19,3 +19,44 @@ exports.getAllProducts = async(req,res)=>{
         products
     })
 }
+
+//update product - admin
+exports.updateProduct = async(req,res,next)=>{
+    let product = await productSchema.findById(req.params.id);
+
+    if(!product){
+        return res.status(404).json({
+            success:false,
+            message:"Product not found"
+        })
+    }
+
+    product = await productSchema.findByIdAndUpdate(req.params.id,req.body,{
+        new:true,
+        runValidators:true,
+        useFindAndModify:false
+    });
+
+    res.status(200).json({
+        success:true,
+        product
+    })
+}
+
+//delete product - admin
+exports.deleteProduct = async(req,res,next)=>{
+    const product = await productSchema.findById(req.params.id);
+
+    if(!product){
+        return res.status(404).json({
+            success:false,
+            message:"Product not found"
+        })
+    }
+
+    await product.remove();
+    res.status(200).json({
+        success:true,
+        message: "product deleted"
+    })
+}
