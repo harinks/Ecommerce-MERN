@@ -12,13 +12,25 @@ exports.registerUser = catchAsyncErrors(async (req, res, next) => {
         email,
         password,
         avatar: {
-            public_id: myCloud.public_id,
-            url: myCloud.secure_url,
+            public_id: "this is sample",
+            url: "sample url",
         },
     });
 
     res.status(201).json({
-        success:true,
+        success: true,
         user,
     })
 });
+
+//login user
+exports.loginUser = catchAsyncErrors(async (req, res, next) => {
+
+    const { email, password } = req.body;
+
+    // checking if user has given password and email both
+    if (!email || !password) {
+        return next(new ErrorHandler("Please Enter Email & Password", 400));
+    }
+    
+})
