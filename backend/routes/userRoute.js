@@ -11,6 +11,7 @@ const {
     getAllUsers,
     getSingleUser,
     updateUserRole,
+    deleteUser,
 } = require("../controllers/userController");
 const { isAuthenticatedUser, authorizeRoles } = require("../middleware/auth");
 const router = express.Router();
@@ -30,5 +31,6 @@ router.route("/admin/users").get(isAuthenticatedUser, authorizeRoles("admin"), g
 router.route("/admin/user/:id")
   .get(isAuthenticatedUser, authorizeRoles("admin"), getSingleUser)
   .put(isAuthenticatedUser, authorizeRoles("admin"), updateUserRole)
+  .delete(isAuthenticatedUser, authorizeRoles("admin"), deleteUser);
 
 module.exports = router;
