@@ -133,7 +133,18 @@ exports.createProductReview = catchAsyncErrors(async (req, res, next) => {
     res.status(200).json({
         success: true,
     });
-
 });
 
+// Get All Reviews of a product
+exports.getProductReviews = catchAsyncErrors(async (req, res, next) => {
+    const product = await productSchema.findById(req.query.productId);
 
+    if (!product) {
+        return next(new ErrorHandler("Product not found", 404));
+    }
+
+    res.status(200).json({
+        success: true,
+        reviews: product.reviews,
+    });
+});
