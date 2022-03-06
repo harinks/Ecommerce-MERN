@@ -10,12 +10,10 @@ const orderSchema = new mongoose.Schema({
             type: String,
             required: true,
         },
-
         state: {
             type: String,
             required: true,
         },
-
         country: {
             type: String,
             required: true,
@@ -47,7 +45,7 @@ const orderSchema = new mongoose.Schema({
                 type: String,
                 required: true,
             },
-            product: {
+            productId: {
                 type: mongoose.Schema.ObjectId,
                 ref: "Product",
                 required: true,
