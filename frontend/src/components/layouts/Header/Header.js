@@ -1,11 +1,12 @@
 import React from 'react';
 import { ReactNavbar } from "overlay-navbar";
 import "./Header.css";
+import logo from '../../../images/logo.png';
 
 const options = {
     burgerColorHover: "#eb4034",
-    //logo,
-    logoWidth: "20vmax",
+    logo,
+    logoWidth: "15vmax",
     navColor1: "lightgray",
     logoHoverSize: "10px",
     logoHoverColor: "#eb4034",
@@ -22,7 +23,7 @@ const options = {
     nav1justifyContent: "flex-end",
     nav2justifyContent: "flex-end",
     nav3justifyContent: "flex-start",
-    nav4justifyContent: "flex-end",
+    nav4justifyContent: "flex-start",
     link1ColorHover: "#eb4034",
     link1Margin: "1vmax",
     profileIconUrl: "/login",
