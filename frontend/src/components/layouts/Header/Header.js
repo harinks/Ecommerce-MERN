@@ -4,12 +4,12 @@ import "./Header.css";
 import logo from '../../../images/logo.png';
 
 const options = {
-    burgerColorHover: "#eb4034",
+    burgerColorHover: "#57B2FC",
     logo,
     logoWidth: "15vmax",
     navColor1: "lightgray",
     logoHoverSize: "10px",
-    logoHoverColor: "#eb4034",
+    logoHoverColor: "#57B2FC",
     link1Text: "Home",
     link2Text: "Products",
     link3Text: "Contact",
