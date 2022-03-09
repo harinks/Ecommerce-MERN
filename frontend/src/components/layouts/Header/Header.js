@@ -4,7 +4,7 @@ import "./Header.css";
 import logo from '../../../images/logo.png';
 
 const options = {
-    burgerColorHover: "#57B2FC",
+    burgerColorHover: "black",
     logo,
     logoWidth: "15vmax",
     navColor1: "lightgray",
@@ -24,15 +24,15 @@ const options = {
     nav2justifyContent: "flex-end",
     nav3justifyContent: "flex-start",
     nav4justifyContent: "flex-start",
-    link1ColorHover: "#eb4034",
+    link1ColorHover: "#57B2FC",
     link1Margin: "1vmax",
     profileIconUrl: "/login",
     profileIconColor: "rgba(35, 35, 35,0.8)",
     searchIconColor: "rgba(35, 35, 35,0.8)",
     cartIconColor: "rgba(35, 35, 35,0.8)",
-    profileIconColorHover: "#eb4034",
-    searchIconColorHover: "#eb4034",
-    cartIconColorHover: "#eb4034",
+    profileIconColorHover: "#57B2FC",
+    searchIconColorHover: "#57B2FC",
+    cartIconColorHover: "#57B2FC",
     cartIconMargin: "1vmax",
 };
 
