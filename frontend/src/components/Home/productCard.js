@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Rating } from "@material-ui/lab"
 
-function Product({product}) {
+function ProductCard({product}) {
     const options = {
         value: product.ratings,
         readOnly: true,
@@ -19,6 +19,6 @@ function Product({product}) {
             <span>{`₹${product.price}`}</span>
         </Link>
     )
-}
+};
 
-export default Product
+export default ProductCard
