@@ -105,7 +105,7 @@
     margin: 0.5vmax;
     color: tomato;
     font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-    font-size: 1vmax;
+    font-size: 1.2vmax;
 }
 
 .productCard:hover {
@@ -113,7 +113,7 @@
     transform: translateY(-1vmax);
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
     .productCard > p {
       font-size: 1.7vmax;
     }
@@ -129,6 +129,11 @@
   
     .productCard > div > span {
       margin: 0 0.5vmax;
-      font: 300 1vmax "Roboto";
+      font: 300 1.5vmax "Roboto";
+    }
+
+    .productCard:hover {
+        box-shadow: 0 0 5px rgba(15, 15, 15, 0.26);
+        transform: translateY(-1vmax);
     }
 }

@@ -10,11 +10,11 @@ function Product({product}) {
     };
     return (
         <Link className="productCard" to={product._id}>
-            <img src={product.image[0].url} alt={product.name} />
+            <img src={product.images[0].url} alt={product.name} />
             <p>{product.name}</p>
             <div>
                 <Rating {...options} />
-                <span>(256)</span>
+                <span>({product.numOfReviews})</span>
             </div>
             <span>{`₹${product.price}`}</span>
         </Link>

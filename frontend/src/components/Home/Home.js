@@ -1,18 +1,20 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useEffect } from 'react';
 import { CgMouse } from "react-icons/all";
 import './Home.css';
 import Product from './Product';
 import MetaData from '../layouts/MetaData';
-
-const product = {
-    name: "Blue Shirt",
-    ratings: "4",
-    image: [{url:'https://img3.exportersindia.com/product_images/bc-full/2019/7/6447138/mens-shirts-1563255452-4999364.jpeg'}],
-    price: "500",
-    _id: "1234"
-}
+import { getProduct, } from '../../actions/productAction';
+import { useSelector, useDispatch } from "react-redux";
 
 function Home() {
+
+    const dispatch = useDispatch();
+    const { products } = useSelector((state) => state.products)
+
+    useEffect(() => {
+        dispatch(getProduct())
+    }, [dispatch]);
+
     return (
         <Fragment>
             <MetaData title="ECOMMERCE" />
@@ -29,13 +31,10 @@ function Home() {
 
             <h2 className="homeHeading">Featured Products</h2>
             <div className="container" id="container">
-                <Product product={product} />
-                <Product product={product} />
-                <Product product={product} />
-                <Product product={product} />
-                <Product product={product} />
-                <Product product={product} />
-                <Product product={product} />
+                {products &&
+                    products.map((product) => (
+                        <Product key={product._id} product={product} />
+                    ))}
             </div>
         </Fragment>
     )
