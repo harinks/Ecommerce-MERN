@@ -24,8 +24,12 @@ function ProductDetails() {
     );
 
     useEffect(() => {
+        if(error){
+            alert.error(error);
+            dispatch(clearErrors());
+        }
         dispatch(getProductDetails(id));
-    }, [dispatch, id])
+    }, [dispatch, id, error, alert]);
 
     const options = {
         size: "medium",

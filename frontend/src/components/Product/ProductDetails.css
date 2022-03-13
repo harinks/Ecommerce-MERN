@@ -169,7 +169,7 @@
     flex: none;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.226);
     border: 1px solid rgba(56, 56, 56, 0.116);
-    width: 30vmax;
+    width: 40vmax;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -239,7 +239,7 @@
     .detailsBlock-3-1-1 > button {
       padding: 1.2vmax;
       width: 4vmax;
-    }
+    } 
   
     .detailsBlock-3-1-1 > input {
       padding: 1.5vmax;
@@ -282,6 +282,7 @@
     .reviewCard > p {
       font: 600 2.5vw "Roboto";
     }
+
     .reviewCardComment {
       font: 300 2vw cursive;
     }
