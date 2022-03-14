@@ -5,7 +5,7 @@ import MetaData from '../layouts/MetaData';
 import { getProduct, clearErrors} from '../../actions/productAction';
 import { useSelector, useDispatch } from "react-redux";
 import Loader from '../layouts/Loader/Loader';
-import ProductCard from './productCard';
+import ProductCard from './ProductCard';
 import { useAlert } from "react-alert";
 
 function Home() {
