@@ -15,7 +15,7 @@ import ReviewCard from './ReviewCard';
 
 function ProductDetails() {
 
-    const id = useParams();
+    const { id } = useParams();
     const dispatch = useDispatch();
     const alert = useAlert();
 
